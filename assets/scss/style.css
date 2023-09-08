@@ -1,0 +1,460 @@
+@font-face {
+  font-family: "DMSans-Black";
+  src: url("../../assets/fonts/DMSans-Black.ttf");
+}
+@font-face {
+  font-family: "Neuzeit-Regular";
+  src: url("../../assets/fonts/DMSans-Regular.ttf");
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Neuzeit-Regular";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DMSans-Black";
+}
+
+.inside-title {
+  color: rgb(37, 150, 190);
+}
+
+.upper-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.9375rem;
+}
+.upper-nav img {
+  width: 12.5rem;
+  cursor: pointer;
+}
+
+.nav-logo-sm {
+  display: none;
+}
+
+.smal-nav {
+  display: none;
+}
+
+.lower-nav {
+  padding: 1.8125rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+.lower-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.lower-nav ul a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.nav-logo {
+  display: none;
+}
+.nav-logo img {
+  width: 12.5rem;
+  cursor: pointer;
+}
+
+.nav_active {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  animation: slideIn 500ms ease-in-out forwards;
+  padding: 0.625rem 0;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.nav_active .nav-logo {
+  display: block;
+}
+
+.agency-header {
+  background-image: url("../images/header-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+}
+.agency-header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 700px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+.agency-header .agency-header-content {
+  position: absolute;
+  color: white;
+  padding-inline: 70px;
+}
+.agency-header .agency-header-content .agency-header-title {
+  font-size: 50px;
+}
+.agency-header .agency-header-content .agency-header-subtitle {
+  margin-top: 20px;
+}
+.agency-header .agency-header-content .agency-header-button {
+  border: none;
+  padding: 10px 30px;
+  background-color: rgb(37, 150, 190);
+  border-radius: 6px;
+  margin-top: 40px;
+}
+.agency-header .agency-header-content .agency-header-button a {
+  text-decoration: none;
+  color: white;
+  font-family: "Neuzeit-Regular";
+  font-size: 18px;
+}
+
+.agency-features .features-title {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  letter-spacing: -8px;
+}
+.agency-features .features-cards-container {
+  background-color: rgb(37, 150, 190);
+  margin: 200px 0px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.agency-features .features-cards-container .features-card {
+  max-width: 250px;
+  background: white;
+  min-height: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 24%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: ease-in-out 0.5s;
+}
+.agency-features .features-cards-container .features-card:nth-of-type(odd) {
+  transform: translateY(-30%);
+}
+.agency-features .features-cards-container .features-card:nth-of-type(even) {
+  transform: translateY(30%);
+}
+.agency-features .features-cards-container .features-card:hover {
+  transform: translateY(0%);
+  transition: ease-in-out 0.5s;
+}
+.agency-features .features-cards-container .features-card .features-card-icon {
+  background-color: rgb(37, 150, 190);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.agency-features .features-cards-container .features-card .features-card-icon img {
+  width: 40px;
+}
+.agency-features .features-cards-container .features-card .features-card-content h2 {
+  padding-top: 20px;
+}
+.agency-features .features-cards-container .features-card .features-card-content p {
+  min-height: 130px;
+  padding-top: 20px;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .checkmark {
+  position: absolute;
+  top: -30px;
+  left: 80px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .container:hover input ~ .checkmark {
+  background-color: white;
+  border: 1px solid #d8d8d8;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .container input:checked ~ .checkmark {
+  background-color: white;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.agency-features .features-cards-container .features-card .features-card-content .features-check .container .checkmark:after {
+  left: 20px;
+  top: 7px;
+  width: 8px;
+  height: 26px;
+  border: solid rgb(37, 150, 190);
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.how-works-section .how-work-title {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  letter-spacing: -8px;
+}
+.how-works-section .how-works-container {
+  display: flex;
+  margin: 100px 0px;
+}
+.how-works-section .how-works-container .how-it-works {
+  flex-basis: 50%;
+}
+.how-works-section .how-works-container .how-it-works .how-it-work-card-container {
+  display: flex;
+  gap: 50px;
+}
+.how-works-section .how-works-container .how-it-works .how-it-work-card {
+  background-color: white;
+  max-width: 250px;
+  min-height: 150px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+}
+.how-works-section .how-works-container .how-it-works .how-it-work-card h1 {
+  font-size: 50px;
+}
+.how-works-section .how-works-container .how-it-works .how-it-work-card h2 {
+  font-size: 20px;
+}
+.how-works-section .how-works-container .work-left {
+  background-color: rgb(37, 150, 190);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.how-works-section .how-works-container .work-right video {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.contact-section .contact-title {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50px;
+  letter-spacing: -8px;
+}
+.contact-section .contact-form {
+  margin: 100px 0px 0px 0px;
+  background: #f4f4f4;
+  padding: 120px;
+}
+.contact-section .contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.contact-section .contact-form form input, .contact-section .contact-form form textarea {
+  min-height: 70px;
+  width: 800px;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  font-family: "Neuzeit-Regular";
+  padding: 0px 20px;
+  font-size: 20px;
+}
+.contact-section .contact-form form input:focus-visible, .contact-section .contact-form form textarea:focus-visible {
+  outline: none;
+}
+.contact-section .contact-form form textarea {
+  min-height: 150px;
+  padding: 20px;
+}
+
+footer {
+  background-color: rgb(37, 150, 190);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  color: white;
+}
+footer h1 {
+  display: flex;
+  align-items: center;
+}
+footer h1 img {
+  width: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .upper-nav, .lower-nav {
+    display: none;
+  }
+  .smal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .smal-nav .smal-logo img {
+    width: 100px;
+  }
+  /* Style for the side navbar */
+  .lower-nav.active {
+    display: block;
+    width: 250px;
+    height: 100%;
+    background-color: #f1f1f1;
+    color: white;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    top: 0;
+    left: 0px; /* Initially off-screen to the left */
+    transition: left 0.3s ease-in-out;
+    z-index: 1;
+  }
+  .lower-nav.active .navbar ul {
+    flex-direction: column;
+  }
+  .lower-nav ul {
+    list-style: none;
+    padding: 20px;
+  }
+  .lower-nav ul li {
+    margin-bottom: 20px;
+  }
+  .agency-features .features-cards-container {
+    flex-wrap: wrap;
+    margin: 40px 0px;
+  }
+  .agency-features .features-cards-container .features-card {
+    flex-basis: 45%;
+  }
+  .agency-features .features-cards-container .features-card:nth-of-type(odd), .agency-features .features-cards-container .features-card:nth-of-type(even) {
+    transform: translateY(0);
+  }
+  .how-works-section .how-works-container {
+    flex-wrap: wrap;
+    margin: 40px 0px;
+  }
+  .how-works-section .how-works-container .how-it-works {
+    flex-basis: 100%;
+  }
+  .contact-section .contact-form form input, .contact-section .contact-form form textarea {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .agency-header {
+    min-height: 600px;
+  }
+  .agency-header:before {
+    min-height: 600px;
+  }
+  .agency-header .agency-header-content {
+    text-align: center;
+  }
+  .agency-header .agency-header-content .agency-header-title {
+    font-size: 35px;
+  }
+  .agency-header .agency-header-content .agency-header-subtitle {
+    font-size: 18px;
+  }
+  .agency-features .features-title h1 {
+    font-size: 40px;
+    letter-spacing: -4px;
+  }
+  .agency-features .features-cards-container .features-card {
+    flex-basis: 100%;
+  }
+  .how-works-section .how-work-title h1 {
+    font-size: 40px;
+    letter-spacing: -4px;
+  }
+  .contact-section .contact-title h1 {
+    font-size: 40px;
+    letter-spacing: -4px;
+  }
+  .contact-section .contact-form form input, .contact-section .contact-form form textarea {
+    width: 300px;
+  }
+  footer h1 {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

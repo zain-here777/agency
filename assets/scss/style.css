@@ -6,6 +6,10 @@
   font-family: "Neuzeit-Regular";
   src: url("../../assets/fonts/DMSans-Regular.ttf");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -47,14 +51,37 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   background-color: white;
 }
+.lower-nav .collapse {
+  display: flex;
+  align-items: center;
+  padding-inline: 50px;
+}
+.lower-nav .collapse .nav-buttons button {
+  background-color: rgb(37, 150, 190);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+.lower-nav .collapse .nav-buttons button a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-family: "Neuzeit-Regular";
+}
+.lower-nav .collapse .nav-buttons .register {
+  background-color: white;
+}
+.lower-nav .collapse .nav-buttons .register a {
+  color: rgb(37, 150, 190);
+}
 .lower-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 25px;
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 .lower-nav ul a {
   text-decoration: none;
@@ -86,9 +113,6 @@ h1, h2, h3, h4, h5, h6 {
   100% {
     transform: translateY(0%);
   }
-}
-.nav_active .nav-logo {
-  display: block;
 }
 
 .agency-header {
@@ -302,6 +326,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   width: 100%;
   display: flex;
+  height: 100%;
 }
 
 .contact-section .contact-title {
@@ -337,12 +362,24 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 150px;
   padding: 20px;
 }
+.contact-section .contact-form form button {
+  border: none;
+  background-color: rgb(37, 150, 190);
+  padding: 10px 30px;
+  border-radius: 3px;
+}
+.contact-section .contact-form form button a {
+  font-family: "Neuzeit-Regular";
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
 
 footer {
   background-color: rgb(37, 150, 190);
   display: flex;
   justify-content: center;
-  padding: 50px;
+  padding: 30px;
   color: white;
 }
 footer h1 {
@@ -353,6 +390,15 @@ footer h1 img {
   width: 200px;
 }
 
+@media only screen and (max-width: 1050px) {
+  .agency-features .features-cards-container {
+    padding: 30px;
+    flex-wrap: wrap;
+  }
+  .agency-features .features-cards-container .features-card {
+    flex-basis: 50%;
+  }
+}
 @media only screen and (max-width: 768px) {
   .upper-nav, .lower-nav {
     display: none;
@@ -370,6 +416,15 @@ footer h1 img {
   }
   .smal-nav .smal-logo img {
     width: 100px;
+  }
+  .collapse {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .collapse .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   /* Style for the side navbar */
   .lower-nav.active {

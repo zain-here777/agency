@@ -31,7 +31,7 @@
 <div class="lower-nav" id="lower-nav">
     <nav class="navbar">
         <div class="nav-logo-sm"><img src="assets/images/logo.png" alt=""></div>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <div class="collapse" id="navbarSupportedContent">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#features">Features</a></li>
@@ -41,6 +41,10 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="nav-buttons">
+                <button><a href="">Login</a></button>
+                <button class="register"><a href="">Register</a></button>
+            </div>
         </div>
     </nav>
 </div>
@@ -52,15 +56,10 @@
         <h3 class="agency-header-subtitle">
             Streamline Operations, Secure Resources, and Ensure Precision
         </h3>
-        <button class="agency-header-button">
-            <a href="">
-                Learn More
-            </a>
-        </button>
     </div>
 </header>
 <main>
-    <section class="agency-features">
+    <section class="agency-features" id="features">
         <div class="features-title">
             <h1>
                 Features <span class="inside-title">.</span>
@@ -145,7 +144,7 @@
             </div>
         </div>
     </section>
-    <section class="how-works-section">
+    <section class="how-works-section" id="about">
         <div class="how-work-title">
             <h1>
                 How it Works <span class="inside-title">?</span>
@@ -197,7 +196,7 @@
             </div>
         </div>
     </section>
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="contact-title">
             <h1>
                 Contact us <span class="inside-title">.</span>
@@ -209,6 +208,7 @@
                 <div><input type="text" placeholder="Email"></div>
                 <div><input type="text" placeholder="Subject"></div>
                 <div><textarea placeholder="Message"></textarea></div>
+                <button><a href="">Send</a></button>
             </form>
         </div>
     </section>
